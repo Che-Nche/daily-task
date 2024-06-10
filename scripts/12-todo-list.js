@@ -1,9 +1,13 @@
 const todoList = [{
-    name: 'make dinner',
-    dueDate: '2022-12-22'
+    name: 'Eating dinner',
+    dueDate: '2022-12-22',
+    time: '18:00'
+    
   }, {
-    name: 'wash dishes',
-    dueDate: '2022-12-22'
+    name: 'Watching movie',
+    dueDate: '2022-12-22',
+    time: '18:30'
+    
   }];
   
   renderTodoList();
@@ -12,10 +16,11 @@ const todoList = [{
     let todoListHTML = '';
   
     todoList.forEach((todoObject, index) => {
-      const { name, dueDate } = todoObject;
+      const { name, dueDate, time } = todoObject;
       const html = `
         <div>${name}</div>
         <div>${dueDate}</div>
+        <div>${time}</div>       
         <button class="delete-todo-button js-delete-todo-button">Delete</button> 
       `;
       todoListHTML += html;
@@ -44,12 +49,17 @@ const todoList = [{
   
     const dateInputElement = document.querySelector('.js-due-date-input');
     const dueDate = dateInputElement.value;
+
+    const timeInputElement = document.querySelector('.js-due-time-input');
+    const time = timeInputElement.value;
   
     todoList.push({
       //name: name,
       //dueDate: dueDate,
       name,
-      dueDate
+      dueDate,
+      time,
+      
     });
   
     inputElement.value = '';
