@@ -1,11 +1,11 @@
 const todoList = [{
-    name: 'Danske Bank's job application',
-    dueDate: '2024-09-09',
+    name: 'Danske Bank job application',
+    dueDate: '2024-09-08',
     time: '09:00'
     
   }, {
     name: 'Going to the Gymn',
-    dueDate: '2024-09-09',
+    dueDate: '2024-09-08',
     time: '11:30'
     
   }];
